@@ -1,0 +1,13 @@
+.full-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.Gym{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+.Gym-cart{
+    background-color:#708090;
+    border-radius: 8px;
+}
