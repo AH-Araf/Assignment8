@@ -38,7 +38,7 @@ const GymCarts = (props) => {
 
             <div className='exercise'>
                 <p><b>Break Time: {0}</b></p>
-                <p><b>Exercise Time: {totalTime}</b></p>
+                <p><b>Exercise Time: {totalTime} sec</b></p>
             </div>
 
         </div>

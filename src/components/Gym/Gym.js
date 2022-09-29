@@ -14,7 +14,7 @@ const Gym = () => {
 
     const [gymCart, setCart] = useState([]);
     
-    const handleAddToCart = (a) =>{ 
+    const handleAddToGymCart = (a) =>{ 
         const newCart = [...gymCart, a];
         setCart(newCart);
     }
@@ -28,7 +28,7 @@ const Gym = () => {
                     gym.map(a => <GymDetails 
                         key={a.id}
                         a={a}
-                        handleAddToCart = {handleAddToCart}
+                        handleAddToGymCart = {handleAddToGymCart}
                         ></GymDetails> )
                 }
             </div>
