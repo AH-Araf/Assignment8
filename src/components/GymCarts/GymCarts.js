@@ -1,7 +1,15 @@
 import React from 'react';
 import './GymCarts.css'
 
-const GymCarts = () => {
+const GymCarts = (props) => {
+    const {gymCart} = props;
+
+    let totalTime = 0;
+    for(const a of gymCart){
+        totalTime = totalTime + a.time;
+    }
+
+
     return (
         <div className='gym-cart'>
             <div className='details'>
@@ -24,12 +32,15 @@ const GymCarts = () => {
                 </div>
             </div>
 
+            <div>
+                <h4>Add a Break</h4>
+            </div>
 
-            {/* <p>Selected Items: {}</p>
-            <p>Total Price: ${}</p>
-            <p>Total Shipping: ${} </p>
-            <p>Vat: ${}</p>
-            <h4>Grand Total: ${} </h4> */}
+            <div className='exercise'>
+                <p><b>Break Time: {0}</b></p>
+                <p><b>Exercise Time: {totalTime}</b></p>
+            </div>
+
         </div>
     );
 };

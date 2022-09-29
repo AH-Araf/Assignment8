@@ -12,6 +12,14 @@ const Gym = () => {
     } , [])
 
 
+    const [gymCart, setCart] = useState([]);
+    
+    const handleAddToCart = (a) =>{ 
+        const newCart = [...gymCart, a];
+        setCart(newCart);
+    }
+
+
 
     return (
         <div className='full-container'>
@@ -20,12 +28,13 @@ const Gym = () => {
                     gym.map(a => <GymDetails 
                         key={a.id}
                         a={a}
+                        handleAddToCart = {handleAddToCart}
                         ></GymDetails> )
                 }
             </div>
 
             <div className='Gym-cart'>
-                <GymCarts></GymCarts>
+                <GymCarts gymCart={gymCart}></GymCarts>
             </div>
             
         </div>
