@@ -8,7 +8,7 @@ const SelectbTime = (props) => {
     }
     return (
         <div>
-            <p><b>Break Time: {totalBreakTime}</b></p>
+            <p><b>Break Time: {totalBreakTime} sec</b></p>
         </div>
     );
 };
