@@ -1,0 +1,14 @@
+.breaking{
+    
+    display: flex;
+    justify-content: space-around;
+}
+.bg-color{
+    background-color: #585858;
+    margin: 6px;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    border: 3px solid #320404;
+    color: white;
+}

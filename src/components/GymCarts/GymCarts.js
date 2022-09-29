@@ -1,14 +1,17 @@
 import React from 'react';
+import Break from '../Break/Break';
 import './GymCarts.css'
 
 const GymCarts = (props) => {
     const {gymCart} = props;
+    // const {breakCart} = props;
 
     let totalTime = 0;
+    // let gymCarts = 0;
     for(const a of gymCart){
         totalTime = totalTime + a.time;
-    }
-
+        
+    } 
 
     return (
         <div className='gym-cart'>
@@ -33,12 +36,15 @@ const GymCarts = (props) => {
             </div>
 
             <div>
-                <h4>Add a Break</h4>
+                <Break></Break>  
             </div>
 
             <div className='exercise'>
-                <p><b>Break Time: {0}</b></p>
                 <p><b>Exercise Time: {totalTime} sec</b></p>
+            </div>
+
+            <div>
+                <button>jhsdgf</button>
             </div>
 
         </div>

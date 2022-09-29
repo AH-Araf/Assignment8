@@ -28,8 +28,7 @@
 }
 .exercise{
     margin-top: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 6px;
     padding: 3px;
     border: 3px solid #320404;
     color: white;
