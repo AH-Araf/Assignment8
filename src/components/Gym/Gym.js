@@ -19,8 +19,6 @@ const Gym = () => {
         setCart(newCart);
     }
 
-
-
     return (
         <div className='full-container'>
             <div className="Gym">

@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+
+import { addToDb, getStoredCart } from '../../utilities/fakedb';
+
 import SelectbTime from '../SelectbTime/SelectbTime';
 import ShowBreak from '../ShowBreak/ShowBreak';
 import './Break.css'
@@ -9,14 +12,29 @@ const Break = () => {
     useEffect(() => {
         fetch('break.json')
         .then(res => res.json())
-        .then( data => setBreak(data))
+        .then( data => {
+            setBreak(data)
+        })
     } , [])
+    
+    useEffect(() =>{
+        const storedCart = getStoredCart();
+        const savedCart = [];
+        for(const _id in storedCart){
+            const addedProduct = breaks.find(breaking => breaking._id === _id);
+            if(addedProduct){
+                
+                savedCart.push(addedProduct);
+            }
+        }
+        setCart(savedCart);
+    }, [breaks])
 
     const [breakCart, setCart] = useState([]);
-    
     const handleAddToBreakCart = (b) =>{ 
         const newBreakCart = [...breakCart, b];
         setCart(newBreakCart);
+        addToDb(b._id)
     }
 
     return (
