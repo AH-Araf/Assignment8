@@ -1,6 +1,8 @@
 import React from 'react';
 import Break from '../Break/Break';
 import './GymCarts.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const GymCarts = (props) => {
     const {gymCart} = props;
@@ -12,6 +14,9 @@ const GymCarts = (props) => {
         totalTime = totalTime + a.time;
         
     } 
+    const notify = () => {
+        toast('Your Activity Completed. This is React Toast')
+    }
 
     return (
         <div className='gym-cart'>
@@ -44,7 +49,8 @@ const GymCarts = (props) => {
             </div>
 
             <div>
-                <button>jhsdgf</button>
+                <button className='btn-cart1' onClick={notify}>Activity Completed</button>
+                <ToastContainer></ToastContainer>
             </div>
 
         </div>
