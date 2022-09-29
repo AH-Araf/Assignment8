@@ -27,15 +27,15 @@ const GymCarts = (props) => {
 
             <div className='align'>
                 <div className='box'>
-                    <h3>75</h3>
+                    <h3>68</h3>
                     <p>Weight</p>
                 </div>
                 <div className='box'>
-                    <h3>6.5</h3>
+                    <h3>5.6</h3>
                     <p>Height</p>
                 </div>
                 <div className='box'>
-                    <h3>25</h3>
+                    <h3>22</h3>
                     <p>Age</p>
                 </div>
             </div>
