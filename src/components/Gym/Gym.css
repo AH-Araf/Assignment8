@@ -11,3 +11,30 @@
     background-color:#708090;
     border-radius: 8px;
 }
+
+@media only screen and (max-width: 515px) {
+    .full-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .Gym{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+  }
+
+  @media only screen and (min-width: 516px) and (max-width:1150px) {
+
+    .full-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+    }
+    .Gym{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+  }

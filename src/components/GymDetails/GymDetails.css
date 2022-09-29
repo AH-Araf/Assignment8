@@ -32,3 +32,13 @@
 .btn-cart:hover{
     background-color: #2F4F4F;
 }
+
+@media only screen and (max-width: 400px) {
+    .gym{
+        width: 100%;
+    }
+    .gym img{
+        width: 96%;
+        
+    }
+  }
